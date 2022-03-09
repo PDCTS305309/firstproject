@@ -1,0 +1,5 @@
+package com.learn.designpatterns.solid.isp;
+
+public interface Printer {
+    void print(Document document);
+}

@@ -1,0 +1,13 @@
+package com.learn.designpatterns.solid.ocp.refactored;
+
+import com.learn.designpatterns.solid.ocp.Product;
+
+import java.util.List;
+import java.util.stream.Stream;
+
+public class BetterFilter implements Filter<Product> {
+    @Override
+    public Stream<Product> filter(List<Product> items, Specification<Product> spec) {
+        return items.stream().filter(spec::isSatisfied);
+    }
+}
